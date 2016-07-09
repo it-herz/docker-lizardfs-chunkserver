@@ -10,6 +10,7 @@ do
   echo Add mount $mnt
   echo $mnt >> /etc/mfs/mfshdd.cfg
   chown mfs:mfs $mnt
+  chown mfs:mfs $mnt/.lock
 done
 
 mfschunkserver -d start
