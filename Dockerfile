@@ -14,4 +14,6 @@ ENV MOUNTS=''
 
 ADD run.sh /
 
+EXPOSE 9422
+
 CMD [ "/run.sh" ]
