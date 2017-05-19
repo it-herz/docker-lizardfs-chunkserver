@@ -6,7 +6,7 @@ RUN apt-get -y update && apt-get -y install wget && \
     wget http://packages.lizardfs.com/lizardfs.key && apt-key add lizardfs.key && \
     echo "deb http://packages.lizardfs.com/debian/jessie jessie main" > /etc/apt/sources.list.d/lizardfs.list && \
     echo "deb-src http://packages.lizardfs.com/debian/jessie jessie main" >> /etc/apt/sources.list.d/lizardfs.list && \
-    apt-get -y update && apt-get -y install lizardfs-chunkserver && \
+    apt-get -y update && apt-get -y install lizardfs-chunkserver gnupg && \
     cp /etc/mfs/mfschunkserver.cfg.dist /etc/mfs/mfschunkserver.cfg && \
     sed -i 's/LIZARDFSCHUNKSERVER_ENABLE=false/LIZARDFSCHUNKSERVER_ENABLE=true/g'  /etc/default/lizardfs-chunkserver
 
