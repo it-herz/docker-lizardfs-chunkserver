@@ -2,7 +2,7 @@ FROM debian:stretch
 
 MAINTAINER Dmitrii Zolotov <dzolotov@herzen.spb.ru>
 
-RUN apt-get -y update && apt-get -y install wget && \
+RUN apt-get -y update && apt-get -y install wget gnupg && \
     wget http://packages.lizardfs.com/lizardfs.key && apt-key add lizardfs.key && \
     echo "deb http://packages.lizardfs.com/debian/jessie jessie main" > /etc/apt/sources.list.d/lizardfs.list && \
     echo "deb-src http://packages.lizardfs.com/debian/jessie jessie main" >> /etc/apt/sources.list.d/lizardfs.list && \
