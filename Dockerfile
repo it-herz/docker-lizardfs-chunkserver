@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:stretch
 
 MAINTAINER Dmitrii Zolotov <dzolotov@herzen.spb.ru>
 
